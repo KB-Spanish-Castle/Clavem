@@ -6,7 +6,7 @@ var CryptoJS = require("crypto-js");
 
 var hash = CryptoJS.SHA256("Message");
 
-console.log(hash);
+console.log(hash.toString(CryptoJS.enc.Base64));
 /**
  * Adds commas to a number
  * @param {number} number
