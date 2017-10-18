@@ -48,7 +48,7 @@ console.log(hash.toString(CryptoJS.SHA256.Base64));
 
 //req.body.email;
  
-modules.export = "TEST TEST TEST";
+module.exports = "TEST TEST TEST";
 
 // module.exports = function (number, locale) {
 //         return number.toLocaleString(locale);
