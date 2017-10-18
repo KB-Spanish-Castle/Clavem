@@ -12,3 +12,9 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 NPM Website is here:
 https://www.npmjs.com/package/clavis-sermo
+
+Instructions:
+
+Step 1:  Do the command npm install clavis-sermo
+      Or npm install clavis-sermo -S
+      or npm install clavis-sermo -D
