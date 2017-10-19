@@ -9,6 +9,7 @@ npm remove clavis-sermo
 
 THEN REINSTALL IT AS DESCRIBED IN STEP 1.
 
++++LISCENSE+++
 
 ISC License (ISC)
 Copyright <2017> <Kyle Bigart>
