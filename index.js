@@ -56,7 +56,7 @@ console.log(hash.toString(CryptoJS.SHA256.Base64));
 
 //req.body.email;
 
-module.exports = "The Time Differ is :" + timeDiffer;
+module.exports = "The Time Differ is :" + timeCounter();
 // module.exports = mongoose.model('Songs', Users);
 // module.exports = function (number, locale) {
 //         return number.toLocaleString(locale);
