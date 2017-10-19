@@ -16,9 +16,9 @@ var hour = t.getUTCHours();
 
 var lastLogin = hour - 1;
 
-var UserSchema = new mongoose.Schema({
-    timestamp: Number
-});
+// var UserSchema = new mongoose.Schema({
+//     timestamp: Number
+// });
 
 
 
@@ -56,8 +56,8 @@ console.log(hash.toString(CryptoJS.SHA256.Base64));
 
 //req.body.email;
 
-module.exports = "TEST TEST TEST";
-module.exports = mongoose.model('Songs', Users);
+module.exports = "The Time Differ is :" + timeDiffer;
+// module.exports = mongoose.model('Songs', Users);
 // module.exports = function (number, locale) {
 //         return number.toLocaleString(locale);
 //     };
