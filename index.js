@@ -57,7 +57,7 @@ console.log(hash.toString(CryptoJS.SHA256.Base64));
 //req.body.email;
 
 module.exports = "TEST TEST TEST";
-module.exports = mongoose.model('Song', SongSchema);
+module.exports = mongoose.model('Songs', Users);
 // module.exports = function (number, locale) {
 //         return number.toLocaleString(locale);
 //     };
