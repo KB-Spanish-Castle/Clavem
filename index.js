@@ -7,24 +7,32 @@ var CryptoJS = require("crypto-js");
 var hash = CryptoJS.SHA256("Message");
 //example url change
 //hash = CryptoJS
+var mongoose = require('mongoose');
+
+
 
 var t = new Date();
-var year = t.getUTCFullYear();
+var hour = t.getUTCHours();
 
-var lastLogin = year - 1;
+var lastLogin = hour - 1;
+
+var UserSchema = new mongoose.Schema({
+    timestamp: Number
+});
 
 
 
-// function timeCounter() {
 
-//     var timeDiffer = year - lastLogin;
+function timeCounter() {
 
-//     if (timeDiffer > 1) {
-//         timeDiffer = "Greater than 1 year";
-//     }
+    var timeDiffer = hour - lastLogin;
 
-//     return timeDiffer;
-// }
+    if (timeDiffer > 1) {
+        timeDiffer = "Greater than 1 year";
+    }
+
+    return timeDiffer;
+}
 // console.log(timeCounter());
 
 console.log(hash.toString(CryptoJS.SHA256.Base64));
@@ -36,10 +44,10 @@ console.log(hash.toString(CryptoJS.SHA256.Base64));
  */
 
 //Be sure to have the location correct!
- 
+
 
 // app.put('/user', function (req, res, next) {
-    
+
 //     mongoose.connect('mongodb://localhost/songs');
 //     user.email; /*= req.body.email;*/
 //     var db = mongoose.connection;``}
@@ -47,9 +55,9 @@ console.log(hash.toString(CryptoJS.SHA256.Base64));
 // var db = mongoose.connection;
 
 //req.body.email;
- 
-module.exports = "TEST TEST TEST";
 
+module.exports = "TEST TEST TEST";
+module.exports = mongoose.model('Song', SongSchema);
 // module.exports = function (number, locale) {
 //         return number.toLocaleString(locale);
 //     };
