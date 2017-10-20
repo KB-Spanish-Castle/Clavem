@@ -14,7 +14,7 @@ var mongoose = require('mongoose');
 var t = new Date();
 var hour = t.getUTCHours();
 
-var lastLogin = hour - 1;
+var lastLogin = hour - 5;
 
 // var UserSchema = new mongoose.Schema({
 //     timestamp: Number
@@ -28,12 +28,13 @@ function timeCounter() {
     var timeDiffer = hour - lastLogin;
 
     if (timeDiffer > 1) {
-        timeDiffer = "Greater than 1 year";
+        alert("Greater\nthan 1 hour(s)?");
+        timeDiffer = "Greater than 1 hour(s)";
     }
 
     return timeDiffer;
 }
-// console.log(timeCounter());
+ console.log(timeCounter());
 
 console.log(hash.toString(CryptoJS.SHA256.Base64));
 /**
@@ -55,9 +56,9 @@ console.log(hash.toString(CryptoJS.SHA256.Base64));
 // var db = mongoose.connection;
 
 //req.body.email;
-
-//module.exports = "The Time Differ is : " + timeCounter();
-module.exports = Clavis();
+//module.exports = alert("Hello\nHow are you?");
+module.exports = "The Time Differ is : " + timeCounter();
+//module.exports = Clavis();
 // module.exports = mongoose.model('Songs', Users);
 // module.exports = function (number, locale) {
 //         return number.toLocaleString(locale);

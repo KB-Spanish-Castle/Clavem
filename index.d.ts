@@ -1,3 +1,3 @@
-export interface Clavis {
-  test(timeCounter): Clavis
-}
+// export interface Clavis {
+//   test(timeCounter): Clavis
+// }
