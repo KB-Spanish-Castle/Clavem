@@ -26,7 +26,6 @@ function timeCounter() {
     var timeDiffer = hour - lastLogin;
 
     if (timeDiffer > 1) {
-        alert("Greater\nthan 1 hour(s)?");
         timeDiffer = "Greater than 1 hour(s)";
     }
 
@@ -34,7 +33,7 @@ function timeCounter() {
 }
 
 function initialize(){
-    
+    return timeCounter();
 }
 // console.log(timeCounter());
 
