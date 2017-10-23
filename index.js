@@ -32,6 +32,10 @@ function timeCounter() {
 
     return timeDiffer;
 }
+
+function initialize(){
+    
+}
 // console.log(timeCounter());
 
 //console.log(hash.toString(CryptoJS.SHA256.Base64));
@@ -55,7 +59,7 @@ function timeCounter() {
 
 //req.body.email;
 //module.exports = alert("Hello\nHow are you?");
-module.exports = timeCounter;
+module.exports = {timeCounter: timeCounter, initialize: initialize};
 //module.exports = Clavis();
 // module.exports = mongoose.model('Songs', Users);
 // module.exports = function (number, locale) {
