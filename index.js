@@ -33,9 +33,9 @@ function timeCounter() {
     return timeDiffer;
 }
 //
-function initialize(word){
+function initialize(){
 
-   // var word = "";
+    var word = "password";
     var hash = CryptoJS.SHA256(word);
     
 
