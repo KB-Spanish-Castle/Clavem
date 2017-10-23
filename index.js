@@ -4,7 +4,9 @@ var SHA256 = require("crypto-js/sha256");
 
 var CryptoJS = require("crypto-js");
 //To run type node index.js
-var hash = CryptoJS.SHA256("Message");
+
+//var hash = CryptoJS.SHA256("Message");
+
 //example url change
 //hash = CryptoJS
 var mongoose = require('mongoose');
@@ -28,12 +30,17 @@ function timeCounter() {
     if (timeDiffer > 1) {
         timeDiffer = "Greater than 1 hour(s)";
     }
-
     return timeDiffer;
 }
+//
+function initialize(word){
 
-function initialize(){
-    return timeCounter();
+   // var word = "";
+    var hash = CryptoJS.SHA256(word);
+    
+
+
+    return hash.toString(CryptoJS.SHA256.Base64);
 }
 // console.log(timeCounter());
 
