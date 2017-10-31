@@ -1,19 +1,15 @@
-CLAVIS-SERMO README:
+CLAVIS-SERMO README
 +*+++++++++++++++++++++*+++++++++++++++++++++++++++++*+
 
-I just released version 0.3.6 though it is mostly finished of my work.
-I still have some features to add.
+Version 1.0.0
+
+
 In the next few days I will work on the documentation.
 
 
-WARNING:
-PLEASE BE WARN THIS NEEDS TO BE UPDATED PERIODICALLY UNTIL DEVELOPMENT CEASES BY USING THIS COMMAND:
-      npm update
+NOTICE:
 
-AS clavis-sermo IS STILL IN HEAVY DEVELOPMENT UNTIL VERSION 1.0.0 OR HIGHER.
-
-UNTIL DEVELOPMENT IS COMPLETED TESTING AND THINGS NOT WORKING IS PART OF
-THE DEVELOPMENT PROCESS.
+Version 1.0.0 is out, if you have a older version (especially 0.3.6 or earlier), then you should get the newest version.
 
 IF npm update DOSEN'T GET THE NEWEST VERSION
 THE BEST THING TO DO IS USE THIS COMMAND:
@@ -29,8 +25,8 @@ NPM Website is here:
 https://www.npmjs.com/package/clavis-sermo
 
 This project will eventually will not be worked on after completation.
-After the 3 weeks of development, this project will be completed.
-Anyone can create a fork or a seprate project, with my code to continude development with it.
+This project is almost completed and most likely would be left untouch.
+Anyone can create a fork or a seprate project, with my code to continude development with it as accordance to license.
 
 https://github.com/KB-Spanish-Castle/Clavem
 
@@ -41,6 +37,14 @@ Step 1:  Do the command you choose -S is the same as --save and -D is the same a
       Or:   npm install clavis-sermo -S
       or:   npm install clavis-sermo -D
 
+Step 2: Be sure to create the file .env with these two fields:
+MAIL_NAME = 'yourEmail'
+MAIL_PASSWORD = 'your-Email's-Password' 
+
+Step 3: create a .gitingore include this:
+app-env
+
+Last Step: Read the terminal if there is any errors such as missing packages.
 
 +++LISCENSE+++
 

@@ -56,11 +56,9 @@ function timeCounter() {
 
 
 
-
-
   function emailAll(user) {
     var grabEmailData = "";
-    
+
     console.log("Time to Grab loop");
     console.log("grabArray is: " + user);
     //grab aRRAY UNDEF
@@ -144,7 +142,7 @@ function serverEmail(myUserName, myEmail, myPassword, sendEmail, mySubject, myMe
     }
   });
 
- 
+
 }
 
 
