@@ -1,4 +1,4 @@
-CLAVIS-SERMO README
+CLAVIS-SERMO README:
 +*+++++++++++++++++++++*+++++++++++++++++++++++++++++*+
 
 I just released version 0.3.6 though it is mostly finished of my work.
