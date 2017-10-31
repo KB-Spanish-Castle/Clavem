@@ -1,28 +1,60 @@
 {
-  "name": "clavis-sermo",
-  "version": "0.3.5",
-  "description": "Password Randomizer NPM project",
-  "main": "y",
-  "scripts": {
-    "test": "mocha --reporter spec"
+  "_args": [
+    [
+      "clavis-sermo@0.3.5",
+      "/Users/kylebigart/mtcode/happyApp_kke"
+    ]
+  ],
+  "_from": "clavis-sermo@0.3.5",
+  "_id": "clavis-sermo@0.3.5",
+  "_inBundle": false,
+  "_integrity": "sha512-/Sj6U6xXfykihtAFLfRa3Uyls4nTnUn9+e3U8Uek734GXcDAgw7XPzeaOW6km2P7AqTsMsB4qt7PB+WccoGSSA==",
+  "_location": "/clavis-sermo",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "clavis-sermo@0.3.5",
+    "name": "clavis-sermo",
+    "escapedName": "clavis-sermo",
+    "rawSpec": "0.3.5",
+    "saveSpec": null,
+    "fetchSpec": "0.3.5"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KB-Spanish-Castle/Clavem.git"
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/clavis-sermo/-/clavis-sermo-0.3.5.tgz",
+  "_spec": "0.3.5",
+  "_where": "/Users/kylebigart/mtcode/happyApp_kke",
+  "author": {
+    "name": "Kyle Bigart"
   },
-  "author": "Kyle Bigart",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/KB-Spanish-Castle/Clavem/issues"
   },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.2",
+    "mocha": "^4.0.1",
+    "mongoose": "^4.12.3",
+    "node-schedule": "^1.2.5"
+  },
+  "description": "Password Randomizer NPM project",
   "engines": {
     "node": ">=4.2.4"
   },
   "homepage": "https://github.com/KB-Spanish-Castle/Clavem#readme",
-  "dependencies": {
-    "chai": "^4.1.2",
-    "crypto-js": "^3.1.9-1",
-    "mocha": "^4.0.1",
-    "mongoose": "^4.12.3"
-  }
+  "license": "ISC",
+  "main": "y",
+  "name": "clavis-sermo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KB-Spanish-Castle/Clavem.git"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "version": "0.3.5"
 }

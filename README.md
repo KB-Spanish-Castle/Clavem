@@ -1,5 +1,11 @@
 CLAVIS-SERMO README
 +*+++++++++++++++++++++*+++++++++++++++++++++++++++++*+
+
+I just released version 0.3.6 though it is mostly finished of my work.
+I still have some features to add.
+In the next few days I will work on the documentation.
+
+
 WARNING:
 PLEASE BE WARN THIS NEEDS TO BE UPDATED PERIODICALLY UNTIL DEVELOPMENT CEASES BY USING THIS COMMAND:
       npm update
