@@ -1,15 +1,25 @@
 CLAVIS-SERMO README
 +*+++++++++++++++++++++*+++++++++++++++++++++++++++++*+
 
-Version 1.0.0
+Version 1.0.2
 
 
 In the next few days I will work on the documentation.
 
 
+  Welcome to "npm clavis-sermo"
+
+  Translation:
+
+  Latin:    English:
+  Clavis =  Key
+  Sermo  =  Word
+
+  In english the tool is Key-Word or just keyword.
+
 NOTICE:
 
-Version 1.0.0 is out, if you have a older version (especially 0.3.6 or earlier), then you should get the newest version.
+Version 1.0.2 is out, if you have a older version (especially 0.3.6 or earlier), then you should get the newest version.
 
 IF npm update DOSEN'T GET THE NEWEST VERSION
 THE BEST THING TO DO IS USE THIS COMMAND:

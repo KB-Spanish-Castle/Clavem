@@ -1,4 +1,15 @@
 'use strict';
+/*
+  Welcome to "npm clavis-sermo"
+
+  Translation:
+
+  Latin:    English:
+  Clavis =  Key
+  Sermo  =  Word
+
+  In english the tool is Key-Word or just keyword.
+*/
 
 require('dotenv').config();
 
@@ -9,18 +20,24 @@ var mongoose = require('mongoose');
 var schedule = require('node-schedule');
 var app = express();
 var User = require('../../models/user.js');
+  //Do a find and replaace of all variables songs with the database -you the admin-
+  //The songs should be replaced to the database the Admin is using.
 mongoose.connect('mongodb://localhost/songs');
 var MAIL_NAME = process.env.MAIL_NAME;
 var MAIL_PASSWORD = process.env.MAIL_PASSWORD;
-var t = new Date();
-var hour = t.getUTCHours();
+  // var t = new Date();
+  // var hour = t.getUTCHours();
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
 var grabArray = [];
-//var dateObj = new Date();
+  // var dateObj = new Date();
 var dateFull = new Date(new Date().getTime()).toLocaleDateString();
-//new Date(new Date().getTime()).toLocaleDateString(); 
-//var dateCompare = user[i].lastUpdate - dateObj;
+  // new Date(new Date().getTime()).toLocaleDateString(); 
+  // var dateCompare = user[i].lastUpdate - dateObj;
+
+  //These time variables are used to easily set the internal timers:
+
+  // It takes 1000 milliseconds for one second
 var second = 1000 * 1;
 var minute = second * 60;
 var hour = minute * 60;
@@ -28,10 +45,11 @@ var day = hour * 24;
 var week = day * 7;
 var month = day * 30;
 var year = day * 365;
-//Important to set how much time the email notification to update password:
-var passwordAlert = ((year * 0) + (1 * month) + (0 * week) + (0 * day) + (0 * hour) + (0 * minute) + (0 * second));
+  //This setting sets w to set how old a password in order to declare it should be emailed:
+var outOfDateSetting = ((0 * year) + (1 * month) + (0 * week) + (0 * day) + (0 * hour) + (0 * minute) + (0 * second));
 
-var howOftenEmailSent = ((year * 0) + (1 * month) + (0 * week));
+  //This is how often a email check to send a email notification to each user.
+var howOftenEmailSent = ((year * 0) + (0 * month) + (0 * week) + (5 * second));
 function timeCounter() {
   console.log(":TEST SUCESS");
   function findUser() {
@@ -48,14 +66,14 @@ function timeCounter() {
 
         grabArray.splice(i, 0, user[i].lastUpdate);
 
-        //How to get pick one user my ID to check it.
+
       }
       console.log(grabArray);
       console.log("GrabARRAY+" + grabArray[0]);
       console.log("grabArray is: " + grabArray.length);
 
       console.log('UPDATE ACCOUNT PASSWORD CHECKER!');
-      //function myFunction() {
+      //  This
       setInterval(function () {
         emailAll(user);
         console.log("UPDATE WORK 5 SEC");
@@ -82,24 +100,30 @@ function timeCounter() {
 
       var calcDates = Date.parse(dateFull) - Date.parse(user[i].lastUpdate);
 
-      if (calcDates > passwordAlert) {
+      if (calcDates > outOfDateSetting) {
         console.log("SUCESS SUCESS!!!")
         grabEmailData = user[i].email;
 
         console.log("grabEmailData is : " + grabEmailData);
-
-        serverEmail("Machine", process.env.MAIL_NAME, process.env.MAIL_PASSWORD, grabEmailData, "Urgent", "Urgent! Please change your password, it's out of date!", 'mongodb://localhost/songs', User);
+        //I made a bunch of side notes, below this line is what it was in original form.
+        //ServerEmail(myUserName, myEmail, myPassword, sendEmail, mySubject, myMessage, databaseURI, databaseModel);
+        serverEmail(/* myUserName */ "Machine",
+         /* myEmail */ process.env.MAIL_NAME,
+         /* myPassword */ process.env.MAIL_PASSWORD,
+         /* sendEmail */ grabEmailData,
+         /* mySubject */ "Urgent",
+         /* myMessage */ "Urgent! Please change your password, it's out of date!",
+         /* databaseURI */ 'mongodb://localhost/songs',
+         /* databaseModel */ User);
 
       }
-
       console.log('REMINDERS WENT THROUGH');
-
     }
 
   }
   findUser();
-
 }
+//console.log(clavis.initialize("password"));
 
 function initialize(word) {
   var hash = CryptoJS.SHA256(word);
@@ -108,20 +132,19 @@ function initialize(word) {
 }
 
 
+// Source of the code I modified for random password feature based on how many characters
+// https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 
-
-//Source of help: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
-
-
-
-
-function randomString(len, charSet, symNum) {
+// Below is how to create how many random characters you want
+// console.log(clavis.randomString(6));
+// OR you the admin can create what characters to be randomized with.
+// console.log(clavis.randoString(5,123abc))
+function randomString(len, charSet/*, symNum */) {
   charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  symNum = symNum || 0;
-  var sym = '`~!@#$%^&*()_+\|]}[{;:/?.>,<';
+  //// I comment out symNum as a feature to work with to mix in two seprate charSets into one.
+  // symNum = symNum || 0;
+  // var sym = '`~!@#$%^&*()"_'+"'"+'+\|]}[{;:/?.>,<';
   var randomString = '';
-
-
 
   for (var i = 0; i < len; i++) {
     var randomPoz = Math.floor(Math.random() * charSet.length);
