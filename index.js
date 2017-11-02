@@ -20,24 +20,24 @@ var mongoose = require('mongoose');
 var schedule = require('node-schedule');
 var app = express();
 var User = require('../../models/user.js');
-  //Do a find and replaace of all variables songs with the database -you the admin-
-  //The songs should be replaced to the database the Admin is using.
+//Do a find and replaace of all variables songs with the database -you the admin-
+//The songs should be replaced to the database the Admin is using.
 mongoose.connect('mongodb://localhost/songs');
 var MAIL_NAME = process.env.MAIL_NAME;
 var MAIL_PASSWORD = process.env.MAIL_PASSWORD;
-  // var t = new Date();
-  // var hour = t.getUTCHours();
+// var t = new Date();
+// var hour = t.getUTCHours();
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
 var grabArray = [];
-  // var dateObj = new Date();
+// var dateObj = new Date();
 var dateFull = new Date(new Date().getTime()).toLocaleDateString();
-  // new Date(new Date().getTime()).toLocaleDateString(); 
-  // var dateCompare = user[i].lastUpdate - dateObj;
+// new Date(new Date().getTime()).toLocaleDateString(); 
+// var dateCompare = user[i].lastUpdate - dateObj;
 
-  //These time variables are used to easily set the internal timers:
+//These time variables are used to easily set the internal timers:
 
-  // It takes 1000 milliseconds for one second
+// It takes 1000 milliseconds for one second
 var second = 1000 * 1;
 var minute = second * 60;
 var hour = minute * 60;
@@ -45,11 +45,11 @@ var day = hour * 24;
 var week = day * 7;
 var month = day * 30;
 var year = day * 365;
-  //This setting sets w to set how old a password in order to declare it should be emailed:
+//This setting sets w to set how old a password in order to declare it should be emailed:
 var outOfDateSetting = ((0 * year) + (1 * month) + (0 * week) + (0 * day) + (0 * hour) + (0 * minute) + (0 * second));
 
-  //This is how often a email check to send a email notification to each user.
-var howOftenEmailSent = ((year * 0) + (0 * month) + (0 * week) + (5 * second));
+//This is how often a email check to send a email notification to each user.
+var howOftenEmailSent = ((year * 0) + (1 * month) + (0 * week));
 function timeCounter() {
   console.log(":TEST SUCESS");
   function findUser() {
