@@ -1,7 +1,7 @@
 CLAVIS-SERMO README
 +*+++++++++++++++++++++*+++++++++++++++++++++++++++++*+
 
-Version 1.0.2
+Version 1.0.4
 
 
 In the next few days I will work on the documentation.
@@ -19,7 +19,7 @@ In the next few days I will work on the documentation.
 
 NOTICE:
 
-Version 1.0.2 is out, if you have a older version (especially 0.3.6 or earlier), then you should get the newest version.
+Version 1.0.3 or later is out, if you have a older version (especially 0.3.6 or earlier), then you should get the newest version.
 
 IF npm update DOSEN'T GET THE NEWEST VERSION
 THE BEST THING TO DO IS USE THIS COMMAND:
@@ -54,7 +54,15 @@ MAIL_PASSWORD = 'your-Email's-Password'
 Step 3: create a .gitingore include this:
 app-env
 
-Last Step: Read the terminal if there is any errors such as missing packages.
+Step 4:
+At the same file that sign up the user.
+On your signup route page include this code:
+lastUpdate: new Date(new Date().getTime()).toLocaleDateString()
+
+Step 5:
+Inside your Mongoose Schema include this code:
+lastUpdate: { type: Date, default: Date.now }
+
 
 +++LISCENSE+++
 
