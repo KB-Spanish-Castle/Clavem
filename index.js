@@ -49,10 +49,9 @@ var outOfDateSetting = ((0 * year) + (1 * month) + (0 * week) + (0 * day) + (0 *
 
   //This is how often a email check to send a email notification
   //to each user by comparing in the MongoDb field of lastUpdate.
-  //  The limit is 24.8 days or 2147483647 is the maximum of seconds (due to largest 32 bit integer) otherwise
-  //  it will break with infinite calling of the function.
+  //  The limit is 24.8 days or 2147483647 is the maximum of seconds (due to largest 32 bit integer limit),
+  //  otherwise it will break with infinite calling of the function.
 var howOftenEmailSent = ((2 * week) + (0 * day));
-var howOftenEmailSent = 2147483647;
 function timeCounter() {
   console.log(":TEST SUCESS");
   function findUser() {
@@ -85,7 +84,7 @@ function timeCounter() {
       console.log("DateFull: " + Date.parse(dateFull) + " The month is " + month);
       var calcDates = Date.parse(dateFull) - Date.parse(user[i].lastUpdate);
       if (calcDates > outOfDateSetting) {
-        console.log("SUCESS SUCESS!!!")
+        console.log("SUCCESS SUCCESS!!!")
         grabEmailData = user[i].email;
         console.log("grabEmailData is : " + grabEmailData);
         serverEmail(/* myUserName */ "Machine",

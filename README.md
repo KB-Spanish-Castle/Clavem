@@ -1,7 +1,7 @@
 CLAVIS-SERMO README
 +*+++++++++++++++++++++*+++++++++++++++++++++++++++++*+
 
-Version 1.0.4
+Version 1.0.5
 
 
 In the next few days I will work on the documentation.
