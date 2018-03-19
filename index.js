@@ -102,14 +102,48 @@ function timeCounter() {
   findUser();
 }
 
-//console.log(clavis.initialize("password"));
+//console.log(clavis.sydney("password"));
 
-function initialize(word) {
+function sydney(word) {
   var hash = CryptoJS.SHA256(word);
 
-  return hash.toString(CryptoJS.SHA256.Base64);
+  return hash.toString(CryptoJS.SHA1.Base64);
 }
+function aberdare(word) {
+  var hash = CryptoJS.MD5(word);
 
+  return hash.toString(CryptoJS.MD5.Base64);
+}
+function abermain(word) {
+  var hash = CryptoJS.SHA1(word);
+
+  return hash.toString(CryptoJS.SHA1.Base64);
+}
+function ballina(word) {
+  var hash = CryptoJS.SHA224(word);
+
+  return hash.toString(CryptoJS.SHA224.Base64);
+}
+function balranald(word) {
+  var hash = CryptoJS.SHA512(word);
+
+  return hash.toString(CryptoJS.SHA512.Base64);
+}
+function canowindra(word) {
+  var hash = CryptoJS.SHA384(SHA384);
+
+  return hash.toString(CryptoJS.SHA384.Base64);
+}
+function cobar(word) {
+  var hash = CryptoJS.SHA3(word);
+
+  return hash.toString(CryptoJS.SHA3.Base64);
+}
+function dapto(word) {
+  var hash = CryptoJS.RIPEMD160(word);
+
+  return hash.toString(CryptoJS.RIPEMD160.Base64);
+}
 
 // Source of the code I modified for random password feature based on how many characters
 // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
@@ -178,4 +212,4 @@ function serverEmail(myUserName, myEmail, myPassword, sendEmail, mySubject, myMe
 }
 
 
-module.exports = { timeCounter: timeCounter, initialize: initialize, serverEmail: serverEmail, randomString: randomString };
+module.exports = { timeCounter: timeCounter, sydney: sydney, aberdare: aberdare, abermain: abermain, ballina: ballina, balranald: balranald, canowindra: canowindra, cobar : cobar, dapto: dapto, serverEmail: serverEmail, randomString: randomString };
