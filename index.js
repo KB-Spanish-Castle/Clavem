@@ -49,8 +49,8 @@ var outOfDateSetting = ((0 * year) + (1 * month) + (0 * week) + (0 * day) + (0 *
 
   //This is how often a email check to send a email notification
   //to each user by comparing in the MongoDb field of lastUpdate.
-  //  The limit is 24.8 days or 2147483647 is the maximum of seconds (due to largest 32 bit integer limit),
-  //  otherwise it will break with infinite calling of the function.
+//  The limit is 24.8 days or 2147483647 is the maximum of seconds (due to largest 32 bit integer limit),
+//  otherwise it will break with infinite calling of the function.
 var howOftenEmailSent = ((2 * week) + (0 * day));
 function timeCounter() {
   console.log(":TEST SUCESS");
@@ -101,50 +101,55 @@ function timeCounter() {
   }
   findUser();
 }
-
+//Example:
 //console.log(clavis.sydney("password"));
+
+//Note: all of these code names are cities of Australia
 
 function sydney(word) {
   var hash = CryptoJS.SHA256(word);
-
   return hash.toString(CryptoJS.SHA1.Base64);
 }
+
 function aberdare(word) {
   var hash = CryptoJS.MD5(word);
-
   return hash.toString(CryptoJS.MD5.Base64);
 }
+
 function abermain(word) {
   var hash = CryptoJS.SHA1(word);
-
   return hash.toString(CryptoJS.SHA1.Base64);
 }
+
 function ballina(word) {
   var hash = CryptoJS.SHA224(word);
-
   return hash.toString(CryptoJS.SHA224.Base64);
 }
+
 function balranald(word) {
   var hash = CryptoJS.SHA512(word);
-
   return hash.toString(CryptoJS.SHA512.Base64);
 }
+
 function canowindra(word) {
   var hash = CryptoJS.SHA384(SHA384);
-
   return hash.toString(CryptoJS.SHA384.Base64);
 }
+
 function cobar(word) {
   var hash = CryptoJS.SHA3(word);
-
   return hash.toString(CryptoJS.SHA3.Base64);
 }
+
 function dapto(word) {
   var hash = CryptoJS.RIPEMD160(word);
-
   return hash.toString(CryptoJS.RIPEMD160.Base64);
 }
 
+function dareton(word) {
+  var hash = CryptoJS.PBKDF2(word);
+  return hash.toString(CryptoJS.PBKDF2.Base64);
+}
 // Source of the code I modified for random password feature based on how many characters
 // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 
@@ -212,4 +217,4 @@ function serverEmail(myUserName, myEmail, myPassword, sendEmail, mySubject, myMe
 }
 
 
-module.exports = { timeCounter: timeCounter, sydney: sydney, aberdare: aberdare, abermain: abermain, ballina: ballina, balranald: balranald, canowindra: canowindra, cobar : cobar, dapto: dapto, serverEmail: serverEmail, randomString: randomString };
+module.exports = { timeCounter: timeCounter, sydney: sydney, aberdare: aberdare, abermain: abermain, ballina: ballina, balranald: balranald, canowindra: canowindra, cobar: cobar, dapto: dapto, dareton: dareton, serverEmail: serverEmail, randomString: randomString };
